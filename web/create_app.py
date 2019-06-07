@@ -1,5 +1,6 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from blog.common.db_connection import db
+from blog.web.register_url import register_bp
 
 
 def create_app():
@@ -10,8 +11,10 @@ def create_app():
     _app.debug = True
 
     # init db
-    db = SQLAlchemy()
     db.init_app(_app)
+
+    # register blueprint
+    register_bp(_app)
 
     return _app
 
