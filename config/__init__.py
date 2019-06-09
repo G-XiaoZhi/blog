@@ -5,4 +5,5 @@ class InitConfig(object):
 
     def __init__(self):
         self.DEBUG = None
-        self.DB_URL_W = None
+        self.SQLALCHEMY_DATABASE_URI = None
+        self.SQLALCHEMY_TRACK_MODIFICATIONS = None

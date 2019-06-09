@@ -11,6 +11,7 @@ class EnvConfig(InitConfig):
         self.set_config()
 
     def set_config(self):
-        self.DB_URL_W = os.environ.get('DB_URL_W')
+        self.SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
         self.DEBUG = os.environ.get('DEBUG')
+        self.SQLALCHEMY_TRACK_MODIFICATIONS = os.environ.get('SQLALCHEMY_TRACK_MODIFICATIONS')
 

@@ -6,7 +6,7 @@ bp = Blueprint(__name__, __name__)
 
 
 @bp.route('/')
-def index():
+def homepage():
     name = request.args.get('name')
     number = request.args.get('number') or 0
     return render_template('homepage.html', name=name, number=number)
